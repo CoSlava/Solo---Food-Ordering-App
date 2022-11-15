@@ -1,0 +1,34 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Slava's Dinner</h1>
+            <h2>Best burgers and pizzas in town.</h2>
+        </header>
+        
+        <section class="add-card-container hidden" id="add-card-container">
+            <h3>Enter Card Details</h3>
+                <input type="text" placeholder="Enter your name" required>
+                <input type="number" required placeholder="Enter card number">
+                <input type="number" required placeholder="Enter CVV">
+            <button class="pay-btn" id="pay-btn" type="submit">Pay</button>
+        </section>
+        
+        <section class="list-items" id="list-items"></section>
+            <section class="order-details-parent hidden" id="display-order-details">
+                <div class="your-order">Your Order:</div>
+                    <div class="order-details" id="order-details"></div>
+                    <p class="total-price" id="total-price">Total price:<span id="calculator"></span></p>
+                <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
+            </section> 
+            
+        <section class="thank-you hidden" id="thank-you"></section>
+        
+	<script src="index.js" type="module"></script>
+    </body>
+</html>

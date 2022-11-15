@@ -1,0 +1,234 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'Smythe', cursive;
+} 
+
+/* Header Section */
+
+header{
+    background-image: url("/media/burger.jpg");
+    background-size: cover;
+    background-position: 0% 62%;
+    width: 600px;
+    height: 200px;
+    margin-bottom: 33px;
+}
+
+h1, h2{
+    color: whitesmoke;
+}
+
+h1{
+    padding: 25px 0 0 30px;
+    letter-spacing: 2.1px;
+    font-size: 39px;
+    margin-bottom: 15px;
+}
+
+h2{
+    margin-top: 0px;
+    padding-left: 30px;
+    letter-spacing: 1.6px;
+    font-size: 22px;
+}
+
+/* List Items Section */
+
+.product-list-container{
+    width: 600px;
+    padding-left: 60px;
+}
+
+.emoji{
+    float: left;
+    font-size: 80px;
+    margin-top: 5px;
+    margin-right: 25px;
+}
+
+.item-name{
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.item-ingredients{
+    font-size: 16px;
+    color: #8B8B8B;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.item-price{
+    font-size: 20px;
+    letter-spacing: 1.1px;
+    margin-top: 10px;
+}
+
+.add-to-cart-btn{
+    font-family: sans-serif;
+    font-weight: 1;
+    font-size: 38px;
+    text-align: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    float: right;
+    color: #8B8B8B;
+    border: 2px solid #DEDEDE;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 70px;
+}
+
+.add-to-cart-btn:hover, .add-to-cart-btn:focus{
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+}
+
+.bottom-border{
+    width: 535px;
+    border-bottom: 1px solid #D2D2D2;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Order Details Section */
+
+.order-details{
+    width: 510px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.remove-txt{
+    padding-left: 15px;
+    font-size: 16px;
+    color: #BBBBBB;
+}
+
+.remove-txt:hover, .remove-txt:focus{
+    cursor: pointer;
+    color: red;
+    font-size: 17px;
+}
+
+.item-price-cart{
+    float: right;
+    padding-right: 7px;
+}
+
+.total-price{
+    font-size: 30px;
+    margin-bottom: 50px;
+    border-top: 2px solid #393333;
+    padding-top: 20px;
+}
+
+#calculator{
+    float: right;
+    margin-right: 10px;
+}
+
+/* Add Card Details */
+
+.add-card-container{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 525px;
+    width: 525px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 200px 20px gray;
+    background-color: #FFFFFF;
+}
+
+.add-card-container h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 45px 0px;
+}
+
+input{
+    display: flex;
+    margin: 0 auto;
+    width: 400px;
+    padding: 15px 0 15px 27px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #8B8B8B;
+}
+
+.pay-btn{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 59px;
+    justify-content: center;
+    width: 430px;
+    padding: 17px 0 17px 0px;
+    background-color: #16DB99;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.pay-btn:hover,
+.pay-btn:focus{
+    cursor: pointer;
+    background-color: #12B37D;
+    font-size: 21px;
+}
+
+/* Thank you section */
+
+.thanks-for-order{
+    width: 500px;
+    margin-bottom: 100px;
+    background-color: #ECFDF5;
+    text-align: center;
+    border-radius: 5px;
+    color: #065F46;
+    font-size: 25px;
+    padding: 50px 0;
+}
+
+/* Utility */
+
+.complete-order-btn{
+    width: 500px;
+    background-color: #16DB99;
+    color: whitesmoke;
+    border: none;
+    font-size: 22px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 60px;
+}
+
+.complete-order-btn:hover,
+.complete-order-btn:focus{
+    cursor: pointer;
+    background-color: #12B37D;
+    font-size: 23px;
+}
+
+.your-order{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 25px;
+    margin-top: 0px;
+}
+
+.hidden{
+    display: none;
+}

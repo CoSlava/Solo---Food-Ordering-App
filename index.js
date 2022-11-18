@@ -1,5 +1,6 @@
 import {menuArray} from "/data.js"
 let orderArray = []
+let index = 0
 let sum = 0
 
 let displayOrderDetails = document.getElementById("display-order-details")
@@ -16,7 +17,7 @@ menuArray.forEach(function(item){
             ${item.emoji}
         </div>
             <h3 class="item-name">${item.name}<div class="add-to-cart-btn" id="add-to-cart" "
-            data-add=${item.id}>+</div></h3>
+            data-add=${item.name}>+</div></h3>
             <p class="item-ingredients">${item.ingredients}</p>
             <h3 class="item-price">$${item.price}</h3>
         <div class="bottom-border"></div>
@@ -35,9 +36,9 @@ document.addEventListener("click", function(e){
     }
 })
 
-function addToCartBtn(itemId){
+function addToCartBtn(itemName){
     const selectedItem = menuArray.filter(function(obj){
-       return obj.id == itemId
+       return obj.name === itemName
     })[0]
         orderArray.push(selectedItem)
         renderCartItems()
@@ -49,10 +50,11 @@ function renderCartItems(){
         orderArray.forEach(function(item){
             orderDetails.innerHTML += `
                 <div id="${item.id}">
-                    <h3 class="item-name">${item.name}<span data-rmv=${item.name} class="remove-txt">remove</span><span class="item-price-cart">$${item.price}</span></h3>
+                    <h3 class="item-name">${item.name}<span data-rmv=${item.id} class="remove-txt">remove</span><span class="item-price-cart">$${item.price}</span></h3>
                     </div>
                 </div>`
             sum += item.price
+            index ++
         })
     
     if (sum > 0) {
@@ -64,8 +66,11 @@ function renderCartItems(){
         thxPage.classList.add("hidden")
 }
 
-function removeItemsFromCart(itemName){
-    orderArray.splice(itemName, 1)
+function removeItemsFromCart(itemId){
+    let newOrderArray = orderArray.filter(function(item){
+        return item.id != parseInt(itemId)
+    })
+    orderArray = newOrderArray
     renderCartItems()
 }
 
